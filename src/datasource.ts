@@ -12,9 +12,9 @@ export const databaseProviders = [
         port: 3306,
         username: 'root',
         password: 'mernana@03',
-        database: 'mysql',
+        database: 'activitymanager',
         entities: [
-            // Task,User
+            Task,User
         ],
         synchronize: true,
       });
