@@ -1,4 +1,6 @@
 import { DataSource } from 'typeorm';
+import { User } from './entities/users';
+import { Task } from './entities/tasks';
 
 export const databaseProviders = [
   {
@@ -12,7 +14,7 @@ export const databaseProviders = [
         password: 'mernana@03',
         database: 'mysql',
         entities: [
-            // __dirname + '/../**/*.entity{.ts,.js}',
+            // Task,User
         ],
         synchronize: true,
       });
@@ -21,3 +23,4 @@ export const databaseProviders = [
     },
   },
 ];
+
