@@ -1,4 +1,4 @@
-import { Controller, Post, Get, Param, Body, Patch, ParseIntPipe, Delete } from "@nestjs/common";
+import { Controller, Post, Get, Param, Body, Patch, ParseIntPipe, Delete, Put } from "@nestjs/common";
 import { TaskService } from "./tasks.service";
 import { CreateTaskDto } from "src/dtos/tasks-dto";
 
@@ -25,17 +25,17 @@ postTask(@Body() taskDetails: CreateTaskDto) {
         return this.taskService.getById(id);
     }
 
+    @Put(':id')
+  update(@Param('id') id: number, @Body() updateTaskDetails: CreateTaskDto) {
+    return this.taskService.updateTask(id,updateTaskDetails);
+  }
+
+  // @Delete(':id')
+  // remove(@Param('id') id: number) {
+  //   return this.taskService.remove(id);
+  // }
     
    
-// @Patch(':id')
-  
-//     async updateTask(
-//     @Body() updateTaskDetails: CreateTaskDto,
-//     @Param('id',  ParseIntPipe) id: number) {
-//     return await this.taskService.updateTask(id,updateTaskDetails);
-//   }
-
-  
 //    @Delete(':id')
   
 //    deleteById(@Param('id') id: number) {

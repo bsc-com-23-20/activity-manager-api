@@ -11,8 +11,3 @@ import { TaskModule } from './Tasks/tasks.module';
 })
 export class AppModule {}
 
-// @Module({
-//   imports: [AuthModule, TutorModule, ReviewModule ,TypeOrmModule.forRoot(tutorshubDataSource)],
-//   controllers: [],
-//   providers: [],
-// })

@@ -32,17 +32,18 @@ getById(id: number){
 return this.taskRepository.findOneById(id);
 }
 
-// async deleteById(id: number) {
-//         const response = await this.taskRepository.delete(taskId: id})
-//         return response
+
+
+       async updateTask(id: number, updateTaskDetails: CreateTaskDto) {
+        await this.taskRepository.update({id}, {...updateTaskDetails})
+    }
+
+    // async remove(id: number) {
+    //     const response = await this.taskRepository.delete({taskId: id})
+    //     return response
 
         
-//     }
-
-//        async updateTask(id: number, updateTaskDetails: CreateTaskDto) {
-//         await this.taskRepository.update({id}, {...updateTaskDetails})
-//     }
-
+    // }
 
 
 }
