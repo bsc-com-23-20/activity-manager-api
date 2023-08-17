@@ -38,12 +38,14 @@ return this.taskRepository.findOneById(id);
         await this.taskRepository.update({id}, {...updateTaskDetails})
     }
 
-    // async remove(id: number) {
-    //     const response = await this.taskRepository.delete({taskId: id})
-    //     return response
+    async remove(id: number) {
+        const response = await this.taskRepository.delete(id)
+        
+
+        return response
 
         
-    // }
+    }
 
 
 }

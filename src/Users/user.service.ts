@@ -29,5 +29,10 @@ async signup(userDetails: CreateUserDto) {
 getById(id: number){
 return this.userRepository.findOneById(id);
 }
+
+
+async remove(id: number) {
+    const response = await this.userRepository.delete(id)
 }
 
+}

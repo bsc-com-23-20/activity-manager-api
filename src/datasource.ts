@@ -8,11 +8,11 @@ export const databaseProviders = [
     useFactory: async () => {
       const dataSource = new DataSource({
         type: 'mysql',
-        host: 'sql7.freemysqlhosting.net',
+        host: 'localhost',
         port: 3306,
-        username: 'sql7634974',
-        password: 'pelp74SSKf',
-        database: 'sql7634974',
+        username: 'root',
+        password: '',
+        database: 'activitymanager',
         entities: [
             Task,User
         ],

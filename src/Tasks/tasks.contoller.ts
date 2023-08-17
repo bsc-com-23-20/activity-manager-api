@@ -30,10 +30,10 @@ postTask(@Body() taskDetails: CreateTaskDto) {
     return this.taskService.updateTask(id,updateTaskDetails);
   }
 
-  // @Delete(':id')
-  // remove(@Param('id') id: number) {
-  //   return this.taskService.remove(id);
-  // }
+  @Delete(':id')
+  remove(@Param('id') id: number) {
+    return this.taskService.remove(id);
+  }
     
    
 //    @Delete(':id')
